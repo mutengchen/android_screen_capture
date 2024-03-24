@@ -1,0 +1,21 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.4.2' apply false
+    id 'com.android.library' version '7.4.2' apply false
+}
+ext{
+    //apkName
+    appApkName="nsh"
+    //上线日期
+    appPutliveDate="202200301"
+    //versionCode(建议每次改动都去手动增加版本号，或者是利用svn版本号去做版本号的自增，因为app内会根据这个code来决定是否清除上一次的ip地址配置)
+    appVersionCode = 34
+    //当前版本号，版本号规则为 x.x.x，x是字母和数字随意组合
+    appVersionName="1.0.1"
+    //当前app的环境（QA为测试环境apk,PRO为正式环境apk）
+    appEnv="QA"
+//    appEnv=""
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
